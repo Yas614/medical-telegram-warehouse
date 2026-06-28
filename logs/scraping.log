@@ -1,0 +1,43 @@
+2026-06-28 19:30:26,939 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2026-06-28 19:30:28,513 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2026-06-28 19:31:08,021 - INFO - Phone migrated to 4
+2026-06-28 19:31:08,170 - INFO - Reconnecting to new data center 4
+2026-06-28 19:31:08,721 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2026-06-28 19:31:08,722 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2026-06-28 19:31:08,722 - INFO - Connecting to 149.154.167.91:443/TcpFull...
+2026-06-28 19:31:12,955 - INFO - Connection to 149.154.167.91:443/TcpFull complete!
+2026-06-28 19:31:37,318 - INFO - Starting scrape for channel: @CheMed1
+2026-06-28 19:31:37,471 - ERROR - Error scraping @CheMed1: No user has "chemed1" as username
+2026-06-28 19:31:37,472 - INFO - Starting scrape for channel: @LobeliaCosmetics
+2026-06-28 19:31:37,791 - INFO - Successfully saved 0 messages for @LobeliaCosmetics
+2026-06-28 19:31:37,791 - INFO - Starting scrape for channel: @TikvahPharma
+2026-06-28 19:31:39,856 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:31:43,058 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:31:46,587 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:31:47,744 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:31:51,274 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:31:53,038 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:31:58,063 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:01,391 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:04,607 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:06,102 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:09,676 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:11,243 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:16,938 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:18,911 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:26,170 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:28,623 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:31,368 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:33,144 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:40,531 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:43,288 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:47,732 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:50,908 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:53,143 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:32:58,454 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:33:01,073 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:33:02,669 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:33:05,733 - INFO - Starting direct file download in chunks of 131072 at 0, stride 131072
+2026-06-28 19:33:07,026 - INFO - Successfully saved 100 messages for @TikvahPharma
+2026-06-28 19:33:07,026 - INFO - Disconnecting from 149.154.167.91:443/TcpFull...
+2026-06-28 19:33:07,026 - INFO - Disconnection from 149.154.167.91:443/TcpFull complete!
