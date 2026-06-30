@@ -1,0 +1,1331 @@
+[0m00:04:34.110873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202B7655940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202B4EF0CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202B9F179D0>]}
+
+
+============================== 00:04:34.140631 | 852194ba-27bb-4d0f-9c0d-0b1fc599e489 ==============================
+[0m00:04:34.140631 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m00:04:34.141708 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m00:04:34.206087 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m00:04:34.206963 [info ] [MainThread]: python version: 3.14.2
+[0m00:04:34.207728 [info ] [MainThread]: python path: C:\Users\hp\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m00:04:34.208487 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:04:34.324060 [info ] [MainThread]: Using profiles dir at C:\Users\hp\medical-telegram-warehouse\medical_warehouse
+[0m00:04:34.324793 [info ] [MainThread]: Using profiles.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\profiles.yml
+[0m00:04:34.325662 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m00:04:34.327821 [info ] [MainThread]: adapter type: postgres
+[0m00:04:34.331144 [info ] [MainThread]: adapter version: 1.10.2
+[0m00:04:34.510622 [info ] [MainThread]: Configuration:
+[0m00:04:34.515975 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:04:34.517131 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:04:34.517909 [info ] [MainThread]: Required dependencies:
+[0m00:04:34.519301 [debug] [MainThread]: Executing "git --help"
+[0m00:04:34.598072 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:04:34.598860 [debug] [MainThread]: STDERR: "b''"
+[0m00:04:34.599435 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:04:34.600017 [info ] [MainThread]: Connection:
+[0m00:04:34.600831 [info ] [MainThread]:   host: localhost
+[0m00:04:34.601695 [info ] [MainThread]:   port: 5432
+[0m00:04:34.602577 [info ] [MainThread]:   user: postgres
+[0m00:04:34.603641 [info ] [MainThread]:   database: medical_db
+[0m00:04:34.604273 [info ] [MainThread]:   schema: analytics
+[0m00:04:34.604987 [info ] [MainThread]:   connect_timeout: 10
+[0m00:04:34.605753 [info ] [MainThread]:   role: None
+[0m00:04:34.606692 [info ] [MainThread]:   search_path: None
+[0m00:04:34.607248 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:04:34.608021 [info ] [MainThread]:   sslmode: None
+[0m00:04:34.608570 [info ] [MainThread]:   sslcert: None
+[0m00:04:34.609096 [info ] [MainThread]:   sslkey: None
+[0m00:04:34.609564 [info ] [MainThread]:   sslrootcert: None
+[0m00:04:34.610178 [info ] [MainThread]:   application_name: dbt
+[0m00:04:34.610840 [info ] [MainThread]:   retries: 1
+[0m00:04:34.617506 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m00:04:35.486114 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:04:40.071464 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:04:40.072014 [debug] [MainThread]: On debug: select 1 as id
+[0m00:04:40.072345 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:04:40.148483 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m00:04:40.168693 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m00:04:40.169644 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m00:04:40.170592 [debug] [MainThread]: On debug: No close available on handle
+[0m00:04:40.171829 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m00:04:40.172510 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:04:40.173097 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m00:04:40.174555 [debug] [MainThread]: Command `dbt debug` failed at 00:04:40.174143 after 6.36 seconds
+[0m00:04:40.175265 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:04:40.175817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202B9FA2EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202BA1CB410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000202B8172030>]}
+[0m00:04:40.176505 [debug] [MainThread]: Flushing usage events
+[0m00:04:42.364406 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:06:03.703933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262CBF55940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262C97F0CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262CE8139D0>]}
+
+
+============================== 00:06:03.718179 | 1ab99151-a2e5-494e-ace0-c4681ea29cb3 ==============================
+[0m00:06:03.718179 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m00:06:03.719135 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m00:06:03.755661 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m00:06:03.756687 [info ] [MainThread]: python version: 3.14.2
+[0m00:06:03.757649 [info ] [MainThread]: python path: C:\Users\hp\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m00:06:03.758388 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:06:03.860434 [info ] [MainThread]: Using profiles dir at C:\Users\hp\medical-telegram-warehouse\medical_warehouse
+[0m00:06:03.861317 [info ] [MainThread]: Using profiles.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\profiles.yml
+[0m00:06:03.861969 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m00:06:03.863650 [info ] [MainThread]: adapter type: postgres
+[0m00:06:03.864363 [info ] [MainThread]: adapter version: 1.10.2
+[0m00:06:04.052288 [info ] [MainThread]: Configuration:
+[0m00:06:04.053090 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:06:04.053704 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:06:04.054237 [info ] [MainThread]: Required dependencies:
+[0m00:06:04.054821 [debug] [MainThread]: Executing "git --help"
+[0m00:06:04.164642 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:06:04.165633 [debug] [MainThread]: STDERR: "b''"
+[0m00:06:04.166290 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:06:04.171109 [info ] [MainThread]: Connection:
+[0m00:06:04.181428 [info ] [MainThread]:   host: localhost
+[0m00:06:04.183009 [info ] [MainThread]:   port: 5432
+[0m00:06:04.185730 [info ] [MainThread]:   user: postgres
+[0m00:06:04.186677 [info ] [MainThread]:   database: medical_db
+[0m00:06:04.189145 [info ] [MainThread]:   schema: analytics
+[0m00:06:04.198392 [info ] [MainThread]:   connect_timeout: 10
+[0m00:06:04.199194 [info ] [MainThread]:   role: None
+[0m00:06:04.200362 [info ] [MainThread]:   search_path: None
+[0m00:06:04.201416 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:06:04.202483 [info ] [MainThread]:   sslmode: None
+[0m00:06:04.203335 [info ] [MainThread]:   sslcert: None
+[0m00:06:04.204697 [info ] [MainThread]:   sslkey: None
+[0m00:06:04.205656 [info ] [MainThread]:   sslrootcert: None
+[0m00:06:04.208247 [info ] [MainThread]:   application_name: dbt
+[0m00:06:04.209649 [info ] [MainThread]:   retries: 1
+[0m00:06:04.213376 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m00:06:04.850950 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:06:04.992502 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:06:04.993260 [debug] [MainThread]: On debug: select 1 as id
+[0m00:06:04.993685 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:06:05.026315 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m00:06:05.047243 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m00:06:05.048503 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m00:06:05.049341 [debug] [MainThread]: On debug: No close available on handle
+[0m00:06:05.049811 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m00:06:05.050358 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:06:05.050849 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m00:06:05.051996 [debug] [MainThread]: Command `dbt debug` failed at 00:06:05.051785 after 1.60 seconds
+[0m00:06:05.052430 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:06:05.052969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262CE876EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262CEACF410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000262CCA72030>]}
+[0m00:06:05.053655 [debug] [MainThread]: Flushing usage events
+[0m00:06:07.048391 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:07:14.395350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DACF915940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DACD1B0CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAD21D39D0>]}
+
+
+============================== 00:07:14.408359 | dd837a42-cafc-4ac2-a352-f85ae9cbb05e ==============================
+[0m00:07:14.408359 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m00:07:14.409452 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m00:07:14.433186 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m00:07:14.433738 [info ] [MainThread]: python version: 3.14.2
+[0m00:07:14.434147 [info ] [MainThread]: python path: C:\Users\hp\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m00:07:14.434533 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:07:14.492942 [info ] [MainThread]: Using profiles dir at C:\Users\hp\medical-telegram-warehouse\medical_warehouse
+[0m00:07:14.493725 [info ] [MainThread]: Using profiles.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\profiles.yml
+[0m00:07:14.494403 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m00:07:14.495561 [info ] [MainThread]: adapter type: postgres
+[0m00:07:14.496021 [info ] [MainThread]: adapter version: 1.10.2
+[0m00:07:14.635434 [info ] [MainThread]: Configuration:
+[0m00:07:14.636544 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:07:14.637467 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:07:14.637920 [info ] [MainThread]: Required dependencies:
+[0m00:07:14.638405 [debug] [MainThread]: Executing "git --help"
+[0m00:07:14.677998 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:07:14.678520 [debug] [MainThread]: STDERR: "b''"
+[0m00:07:14.678976 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:07:14.679542 [info ] [MainThread]: Connection:
+[0m00:07:14.680008 [info ] [MainThread]:   host: localhost
+[0m00:07:14.680453 [info ] [MainThread]:   port: 5432
+[0m00:07:14.680977 [info ] [MainThread]:   user: postgres
+[0m00:07:14.681417 [info ] [MainThread]:   database: medical_db
+[0m00:07:14.681808 [info ] [MainThread]:   schema: analytics
+[0m00:07:14.682282 [info ] [MainThread]:   connect_timeout: 10
+[0m00:07:14.682714 [info ] [MainThread]:   role: None
+[0m00:07:14.683050 [info ] [MainThread]:   search_path: None
+[0m00:07:14.683499 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:07:14.684034 [info ] [MainThread]:   sslmode: None
+[0m00:07:14.684404 [info ] [MainThread]:   sslcert: None
+[0m00:07:14.684678 [info ] [MainThread]:   sslkey: None
+[0m00:07:14.685169 [info ] [MainThread]:   sslrootcert: None
+[0m00:07:14.685550 [info ] [MainThread]:   application_name: dbt
+[0m00:07:14.685838 [info ] [MainThread]:   retries: 1
+[0m00:07:14.687532 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m00:07:14.911621 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:07:14.983447 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:07:14.984079 [debug] [MainThread]: On debug: select 1 as id
+[0m00:07:14.984555 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:07:15.014594 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m00:07:15.035472 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m00:07:15.037724 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m00:07:15.038582 [debug] [MainThread]: On debug: No close available on handle
+[0m00:07:15.039245 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m00:07:15.039985 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:07:15.040543 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m00:07:15.042028 [debug] [MainThread]: Command `dbt debug` failed at 00:07:15.041836 after 0.78 seconds
+[0m00:07:15.042496 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:07:15.042950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAD2236EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAD244F410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DAD0436030>]}
+[0m00:07:15.043436 [debug] [MainThread]: Flushing usage events
+[0m00:07:17.090046 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:11:06.316483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000243DAA15940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000243D8330CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000243DD2D79D0>]}
+
+
+============================== 17:11:06.348809 | d3a87f73-07a9-4d78-b2a0-9738b7ddbdc6 ==============================
+[0m17:11:06.348809 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:11:06.349652 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m17:11:06.417247 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m17:11:06.418049 [info ] [MainThread]: python version: 3.14.2
+[0m17:11:06.418703 [info ] [MainThread]: python path: C:\Users\hp\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m17:11:06.419242 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:11:06.719930 [info ] [MainThread]: Using profiles dir at C:\Users\hp\medical-telegram-warehouse\medical_warehouse
+[0m17:11:06.721189 [info ] [MainThread]: Using profiles.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\profiles.yml
+[0m17:11:06.722331 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m17:11:06.724885 [info ] [MainThread]: adapter type: postgres
+[0m17:11:06.725559 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:11:06.886785 [info ] [MainThread]: Configuration:
+[0m17:11:06.888799 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:11:06.890414 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:11:06.891352 [info ] [MainThread]: Required dependencies:
+[0m17:11:06.892216 [debug] [MainThread]: Executing "git --help"
+[0m17:11:06.982154 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:11:06.982998 [debug] [MainThread]: STDERR: "b''"
+[0m17:11:06.983875 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:11:06.984765 [info ] [MainThread]: Connection:
+[0m17:11:06.985616 [info ] [MainThread]:   host: localhost
+[0m17:11:06.986281 [info ] [MainThread]:   port: 5432
+[0m17:11:06.987142 [info ] [MainThread]:   user: postgres
+[0m17:11:06.987839 [info ] [MainThread]:   database: medical_db
+[0m17:11:06.989012 [info ] [MainThread]:   schema: analytics
+[0m17:11:06.989733 [info ] [MainThread]:   connect_timeout: 10
+[0m17:11:06.990390 [info ] [MainThread]:   role: None
+[0m17:11:06.992964 [info ] [MainThread]:   search_path: None
+[0m17:11:06.995546 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:11:06.997869 [info ] [MainThread]:   sslmode: None
+[0m17:11:07.004047 [info ] [MainThread]:   sslcert: None
+[0m17:11:07.005535 [info ] [MainThread]:   sslkey: None
+[0m17:11:07.010229 [info ] [MainThread]:   sslrootcert: None
+[0m17:11:07.014211 [info ] [MainThread]:   application_name: dbt
+[0m17:11:07.015119 [info ] [MainThread]:   retries: 1
+[0m17:11:07.016419 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:11:07.687549 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:11:12.468422 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:11:12.469731 [debug] [MainThread]: On debug: select 1 as id
+[0m17:11:12.470210 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:11:16.560002 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+[0m17:11:20.625105 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m17:11:20.625806 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m17:11:20.626334 [debug] [MainThread]: On debug: No close available on handle
+[0m17:11:20.626791 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:11:20.627777 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:11:20.628642 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+  	Is the server running on that host and accepting TCP/IP connections?
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:11:20.630210 [debug] [MainThread]: Command `dbt debug` failed at 17:11:20.629968 after 14.55 seconds
+[0m17:11:20.630747 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:11:20.631300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000243DD32AEA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000243DD54B410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000243DB536030>]}
+[0m17:11:20.631865 [debug] [MainThread]: Flushing usage events
+[0m17:11:22.593898 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:15:44.069914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3D7D5940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3B070CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB400939D0>]}
+
+
+============================== 17:15:44.088362 | f79da932-6365-41fb-878a-945cf7d21b1c ==============================
+[0m17:15:44.088362 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:15:44.089410 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m17:15:44.153476 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m17:15:44.154277 [info ] [MainThread]: python version: 3.14.2
+[0m17:15:44.155360 [info ] [MainThread]: python path: C:\Users\hp\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m17:15:44.156042 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:15:44.297816 [info ] [MainThread]: Using profiles dir at C:\Users\hp\medical-telegram-warehouse\medical_warehouse
+[0m17:15:44.299023 [info ] [MainThread]: Using profiles.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\profiles.yml
+[0m17:15:44.300048 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m17:15:44.302593 [info ] [MainThread]: adapter type: postgres
+[0m17:15:44.303511 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:15:44.705340 [info ] [MainThread]: Configuration:
+[0m17:15:44.707236 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:15:44.717079 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:15:44.720095 [info ] [MainThread]: Required dependencies:
+[0m17:15:44.730428 [debug] [MainThread]: Executing "git --help"
+[0m17:15:44.875830 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:15:44.876901 [debug] [MainThread]: STDERR: "b''"
+[0m17:15:44.878256 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:15:44.879165 [info ] [MainThread]: Connection:
+[0m17:15:44.880274 [info ] [MainThread]:   host: localhost
+[0m17:15:44.880944 [info ] [MainThread]:   port: 5432
+[0m17:15:44.881468 [info ] [MainThread]:   user: postgres
+[0m17:15:44.881945 [info ] [MainThread]:   database: medical_db
+[0m17:15:44.882402 [info ] [MainThread]:   schema: analytics
+[0m17:15:44.882853 [info ] [MainThread]:   connect_timeout: 10
+[0m17:15:44.883466 [info ] [MainThread]:   role: None
+[0m17:15:44.884292 [info ] [MainThread]:   search_path: None
+[0m17:15:44.886054 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:15:44.887780 [info ] [MainThread]:   sslmode: None
+[0m17:15:44.888999 [info ] [MainThread]:   sslcert: None
+[0m17:15:44.890019 [info ] [MainThread]:   sslkey: None
+[0m17:15:44.896882 [info ] [MainThread]:   sslrootcert: None
+[0m17:15:44.897816 [info ] [MainThread]:   application_name: dbt
+[0m17:15:44.898682 [info ] [MainThread]:   retries: 1
+[0m17:15:44.900177 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:15:45.888238 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:15:46.221092 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:15:46.222010 [debug] [MainThread]: On debug: select 1 as id
+[0m17:15:46.222752 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:15:46.305120 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+[0m17:15:46.333042 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m17:15:46.334618 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m17:15:46.335397 [debug] [MainThread]: On debug: No close available on handle
+[0m17:15:46.336199 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:15:46.337191 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:15:46.338157 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:15:46.343144 [debug] [MainThread]: Command `dbt debug` failed at 17:15:46.340001 after 2.50 seconds
+[0m17:15:46.343933 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:15:46.345066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB400F6EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB403FF410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3E2F2030>]}
+[0m17:15:46.346134 [debug] [MainThread]: Flushing usage events
+[0m17:15:49.095016 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:18:17.597223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E859F15940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8577B0CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E85C7D79D0>]}
+
+
+============================== 17:18:17.614369 | 7a4090ae-cd9d-451e-9791-a7cb7f9317b9 ==============================
+[0m17:18:17.614369 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:18:17.616013 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m17:18:17.670936 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m17:18:17.672925 [info ] [MainThread]: python version: 3.14.2
+[0m17:18:17.673775 [info ] [MainThread]: python path: C:\Users\hp\medical-telegram-warehouse\venv\Scripts\python.exe
+[0m17:18:17.674631 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m17:18:17.781574 [info ] [MainThread]: Using profiles dir at C:\Users\hp\medical-telegram-warehouse\medical_warehouse
+[0m17:18:17.782442 [info ] [MainThread]: Using profiles.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\profiles.yml
+[0m17:18:17.784407 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\hp\medical-telegram-warehouse\medical_warehouse\dbt_project.yml
+[0m17:18:17.787235 [info ] [MainThread]: adapter type: postgres
+[0m17:18:17.788158 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:18:17.960689 [info ] [MainThread]: Configuration:
+[0m17:18:17.961533 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:18:17.962199 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:18:17.963519 [info ] [MainThread]: Required dependencies:
+[0m17:18:17.964288 [debug] [MainThread]: Executing "git --help"
+[0m17:18:18.030713 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:18:18.031397 [debug] [MainThread]: STDERR: "b''"
+[0m17:18:18.031936 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:18:18.032616 [info ] [MainThread]: Connection:
+[0m17:18:18.033986 [info ] [MainThread]:   host: localhost
+[0m17:18:18.034806 [info ] [MainThread]:   port: 5432
+[0m17:18:18.035590 [info ] [MainThread]:   user: postgres
+[0m17:18:18.036659 [info ] [MainThread]:   database: medical_db
+[0m17:18:18.037249 [info ] [MainThread]:   schema: analytics
+[0m17:18:18.038167 [info ] [MainThread]:   connect_timeout: 10
+[0m17:18:18.039076 [info ] [MainThread]:   role: None
+[0m17:18:18.040044 [info ] [MainThread]:   search_path: None
+[0m17:18:18.042009 [info ] [MainThread]:   keepalives_idle: 0
+[0m17:18:18.044778 [info ] [MainThread]:   sslmode: None
+[0m17:18:18.045772 [info ] [MainThread]:   sslcert: None
+[0m17:18:18.046575 [info ] [MainThread]:   sslkey: None
+[0m17:18:18.047130 [info ] [MainThread]:   sslrootcert: None
+[0m17:18:18.047604 [info ] [MainThread]:   application_name: dbt
+[0m17:18:18.048046 [info ] [MainThread]:   retries: 1
+[0m17:18:18.048772 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:18:18.532071 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m17:18:18.667337 [debug] [MainThread]: Using postgres connection "debug"
+[0m17:18:18.669514 [debug] [MainThread]: On debug: select 1 as id
+[0m17:18:18.670283 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:18:18.773678 [debug] [MainThread]: SQL status: SELECT 1 in 0.103 seconds
+[0m17:18:18.775396 [debug] [MainThread]: On debug: Close
+[0m17:18:18.776173 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:18:18.778192 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:18:18.779849 [debug] [MainThread]: Command `dbt debug` succeeded at 17:18:18.779554 after 1.44 seconds
+[0m17:18:18.780423 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:18:18.781198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E85C82B490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E85CA7B410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E85AA32030>]}
+[0m17:18:18.781814 [debug] [MainThread]: Flushing usage events
+[0m17:18:21.024889 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:18:38.804148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CA8A5940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C8130CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CD197890>]}
+
+
+============================== 17:18:38.821635 | e0fcb3df-24cd-4065-b251-5d200fad55a1 ==============================
+[0m17:18:38.821635 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:18:38.822621 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m17:18:39.331385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CD17A3F0>]}
+[0m17:18:39.579061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CD2B7240>]}
+[0m17:18:39.585616 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:18:40.443889 [debug] [MainThread]: checksum: 5f6fb86e6b771a9b4f977248c22cc3a35e9a62bd5f45b5c0239fc851495f1ddd, vars: {}, profile: medical_warehouse, target: dev, version: 1.12.0b3
+[0m17:18:40.446195 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:18:40.447944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CD27AD50>]}
+[0m17:18:44.156032 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on 'fct_messages' in
+package 'medical_warehouse' (models\marts\schema.yml). Arguments to generic
+tests should be nested under the `arguments` property.
+[0m17:18:44.156980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CF1C9B80>]}
+[0m17:18:44.477065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CF2C2510>]}
+[0m17:18:44.607982 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m17:18:44.644725 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m17:18:44.721372 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\osi_document.json
+[0m17:18:44.779097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CF722B60>]}
+[0m17:18:44.779811 [info ] [MainThread]: Found 4 models, 3 data tests, 1 source, 475 macros
+[0m17:18:44.780418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CF66EA50>]}
+[0m17:18:44.786799 [info ] [MainThread]: 
+[0m17:18:44.788610 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:18:44.789760 [info ] [MainThread]: 
+[0m17:18:44.790957 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:18:44.795995 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_db'
+[0m17:18:44.912869 [debug] [ThreadPool]: Using postgres connection "list_medical_db"
+[0m17:18:44.913373 [debug] [ThreadPool]: On list_medical_db: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:18:44.913686 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:18:44.968819 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.055 seconds
+[0m17:18:44.970434 [debug] [ThreadPool]: On list_medical_db: Close
+[0m17:18:44.972238 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_medical_db, now create_medical_db_analytics)
+[0m17:18:44.996061 [debug] [ThreadPool]: Creating schema "database: "medical_db"
+schema: "analytics"
+"
+[0m17:18:45.003004 [debug] [ThreadPool]: Using postgres connection "create_medical_db_analytics"
+[0m17:18:45.003546 [debug] [ThreadPool]: On create_medical_db_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "create_medical_db_analytics"} */
+create schema if not exists "analytics"
+[0m17:18:45.003863 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:18:45.028001 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.024 seconds
+[0m17:18:45.029157 [debug] [ThreadPool]: On create_medical_db_analytics: COMMIT
+[0m17:18:45.029694 [debug] [ThreadPool]: Using postgres connection "create_medical_db_analytics"
+[0m17:18:45.030073 [debug] [ThreadPool]: On create_medical_db_analytics: COMMIT
+[0m17:18:45.036237 [debug] [ThreadPool]: SQL status: COMMIT in 0.006 seconds
+[0m17:18:45.036901 [debug] [ThreadPool]: On create_medical_db_analytics: Close
+[0m17:18:45.040328 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_db_analytics'
+[0m17:18:45.047600 [debug] [ThreadPool]: Using postgres connection "list_medical_db_analytics"
+[0m17:18:45.048210 [debug] [ThreadPool]: On list_medical_db_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_db_analytics"} */
+select
+      'medical_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m17:18:45.049709 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:18:45.084566 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.035 seconds
+[0m17:18:45.086260 [debug] [ThreadPool]: On list_medical_db_analytics: ROLLBACK
+[0m17:18:45.088537 [debug] [ThreadPool]: On list_medical_db_analytics: Close
+[0m17:18:45.094985 [debug] [MainThread]: Using postgres connection "master"
+[0m17:18:45.095540 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:18:45.095925 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:18:45.130813 [debug] [MainThread]: SQL status: SELECT 0 in 0.035 seconds
+[0m17:18:45.132799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CF792C50>]}
+[0m17:18:45.133688 [debug] [MainThread]: On master: ROLLBACK
+[0m17:18:45.136104 [debug] [MainThread]: On master: COMMIT
+[0m17:18:45.136598 [debug] [MainThread]: Using postgres connection "master"
+[0m17:18:45.136918 [debug] [MainThread]: On master: COMMIT
+[0m17:18:45.140394 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m17:18:45.140882 [debug] [MainThread]: On master: Close
+[0m17:18:45.180354 [debug] [Thread-2 (]: Began running node model.medical_warehouse.stg_telegram_messages
+[0m17:18:45.182614 [debug] [Thread-1 (]: Began running node model.medical_warehouse.dim_dates
+[0m17:18:45.181318 [info ] [Thread-2 (]: 2 of 4 START sql view model analytics.stg_telegram_messages .................... [RUN]
+[0m17:18:45.185852 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.medical_warehouse.stg_telegram_messages'
+[0m17:18:45.186590 [debug] [Thread-2 (]: Began compiling node model.medical_warehouse.stg_telegram_messages
+[0m17:18:45.183556 [info ] [Thread-1 (]: 1 of 4 START sql table model analytics.dim_dates ............................... [RUN]
+[0m17:18:45.194998 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.medical_warehouse.dim_dates'
+[0m17:18:45.196145 [debug] [Thread-1 (]: Began compiling node model.medical_warehouse.dim_dates
+[0m17:18:45.203508 [debug] [Thread-1 (]: Writing injected SQL for node "model.medical_warehouse.dim_dates"
+[0m17:18:45.206955 [debug] [Thread-2 (]: Writing injected SQL for node "model.medical_warehouse.stg_telegram_messages"
+[0m17:18:45.210633 [debug] [Thread-1 (]: Began executing node model.medical_warehouse.dim_dates
+[0m17:18:45.211497 [debug] [Thread-2 (]: Began executing node model.medical_warehouse.stg_telegram_messages
+[0m17:18:45.278502 [debug] [Thread-1 (]: Writing runtime sql for node "model.medical_warehouse.dim_dates"
+[0m17:18:45.283009 [debug] [Thread-2 (]: Writing runtime sql for node "model.medical_warehouse.stg_telegram_messages"
+[0m17:18:45.287894 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:18:45.289223 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_dates"} */
+
+  
+    
+
+  create  table "medical_db"."analytics"."dim_dates__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with date_series as (
+    select generate_series(
+        '2026-01-01'::timestamp, 
+        '2026-12-31'::timestamp, 
+        '1 day'::interval
+    ) as full_date
+)
+
+select
+    to_char(full_date, 'YYYYMMDD')::int as date_key,
+    full_date::date as full_date,
+    extract(isodow from full_date) as day_of_week,
+    to_char(full_date, 'Day') as day_name,
+    extract(week from full_date) as week_of_year,
+    extract(month from full_date) as month,
+    to_char(full_date, 'Month') as month_name,
+    extract(quarter from full_date) as quarter,
+    extract(year from full_date) as year,
+    case when extract(isodow from full_date) in (6, 7) then true else false end as is_weekend
+from date_series
+  );
+  
+[0m17:18:45.289773 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:18:45.288588 [debug] [Thread-2 (]: Using postgres connection "model.medical_warehouse.stg_telegram_messages"
+[0m17:18:45.290524 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.stg_telegram_messages"} */
+
+  create view "medical_db"."analytics"."stg_telegram_messages__dbt_tmp"
+    
+    
+  as (
+    with raw_source as (
+    select * from "medical_db"."raw"."telegram_messages"
+)
+
+select
+    message_id,
+    replace(channel_name, '@', '') as channel_name,
+    cast(message_date as timestamp) as message_date,
+    coalesce(message_text, '') as message_text,
+    length(coalesce(message_text, '')) as message_length,
+    coalesce(has_media, false) as has_image,
+    image_path,
+    coalesce(views, 0) as view_count,
+    coalesce(forwards, 0) as forward_count
+from raw_source
+where message_id is not null
+  );
+[0m17:18:45.291098 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:18:45.358363 [debug] [Thread-2 (]: Postgres adapter: Postgres error: relation "raw.telegram_messages" does not exist
+LINE 8:     select * from "medical_db"."raw"."telegram_messages"
+                          ^
+
+[0m17:18:45.359096 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: ROLLBACK
+[0m17:18:45.361378 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: Close
+[0m17:18:45.369312 [debug] [Thread-1 (]: SQL status: SELECT 365 in 0.079 seconds
+[0m17:18:45.383629 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:18:45.384356 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_dates"} */
+alter table "medical_db"."analytics"."dim_dates__dbt_tmp" rename to "dim_dates"
+[0m17:18:45.387214 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m17:18:45.409149 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: COMMIT
+[0m17:18:45.409871 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:18:45.410310 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: COMMIT
+[0m17:18:45.416727 [debug] [Thread-1 (]: SQL status: COMMIT in 0.006 seconds
+[0m17:18:45.425797 [debug] [Thread-1 (]: Applying DROP to: "medical_db"."analytics"."dim_dates__dbt_backup"
+[0m17:18:45.434960 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:18:45.435644 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_dates"} */
+drop table if exists "medical_db"."analytics"."dim_dates__dbt_backup" cascade
+[0m17:18:45.438723 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m17:18:45.442220 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: Close
+[0m17:18:45.447363 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CFFE82D0>]}
+[0m17:18:45.450937 [info ] [Thread-1 (]: 1 of 4 OK created sql table model analytics.dim_dates .......................... [[32mSELECT 365[0m in 0.25s]
+[0m17:18:45.458534 [debug] [Thread-1 (]: Finished running node model.medical_warehouse.dim_dates
+[0m17:18:45.633194 [debug] [Thread-2 (]: Database Error in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)
+  relation "raw.telegram_messages" does not exist
+  LINE 8:     select * from "medical_db"."raw"."telegram_messages"
+                            ^
+  compiled code at target\run\medical_warehouse\models\staging\stg_telegram_messages.sql
+[0m17:18:45.634107 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e0fcb3df-24cd-4065-b251-5d200fad55a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CAD9C9D0>]}
+[0m17:18:45.635115 [error] [Thread-2 (]: 2 of 4 ERROR creating sql view model analytics.stg_telegram_messages ........... [[31mERROR[0m in 0.45s]
+[0m17:18:45.636453 [debug] [Thread-2 (]: Finished running node model.medical_warehouse.stg_telegram_messages
+[0m17:18:45.637410 [debug] [Thread-7 (]: Marking all children of 'model.medical_warehouse.stg_telegram_messages' to be skipped because of status 'error'.  Reason: Database Error in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)
+  relation "raw.telegram_messages" does not exist
+  LINE 8:     select * from "medical_db"."raw"."telegram_messages"
+                            ^
+  compiled code at target\run\medical_warehouse\models\staging\stg_telegram_messages.sql.
+[0m17:18:45.639449 [debug] [Thread-4 (]: Began running node model.medical_warehouse.fct_messages
+[0m17:18:45.640727 [debug] [Thread-3 (]: Began running node model.medical_warehouse.dim_channels
+[0m17:18:45.640147 [info ] [Thread-4 (]: 4 of 4 SKIP relation analytics.fct_messages .................................... [[33mSKIP[0m]
+[0m17:18:45.642838 [debug] [Thread-4 (]: Finished running node model.medical_warehouse.fct_messages
+[0m17:18:45.641937 [info ] [Thread-3 (]: 3 of 4 SKIP relation analytics.dim_channels .................................... [[33mSKIP[0m]
+[0m17:18:45.644053 [debug] [Thread-3 (]: Finished running node model.medical_warehouse.dim_channels
+[0m17:18:45.647233 [debug] [MainThread]: On master: COMMIT
+[0m17:18:45.647813 [debug] [MainThread]: Using postgres connection "master"
+[0m17:18:45.649082 [debug] [MainThread]: On master: COMMIT
+[0m17:18:45.651220 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:18:45.674843 [debug] [MainThread]: SQL status: COMMIT in 0.024 seconds
+[0m17:18:45.675518 [debug] [MainThread]: On master: Close
+[0m17:18:45.676623 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:18:45.677823 [debug] [MainThread]: Connection 'create_medical_db_analytics' was properly closed.
+[0m17:18:45.678339 [debug] [MainThread]: Connection 'list_medical_db_analytics' was properly closed.
+[0m17:18:45.678745 [debug] [MainThread]: Connection 'model.medical_warehouse.stg_telegram_messages' was properly closed.
+[0m17:18:45.679302 [debug] [MainThread]: Connection 'model.medical_warehouse.dim_dates' was properly closed.
+[0m17:18:45.680107 [info ] [MainThread]: 
+[0m17:18:45.680937 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.89 seconds (0.89s).
+[0m17:18:45.683818 [debug] [MainThread]: Command end result
+[0m17:18:45.804839 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m17:18:45.810096 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m17:18:45.816120 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\osi_document.json
+[0m17:18:45.826419 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\run_results.json
+[0m17:18:45.826997 [info ] [MainThread]: 
+[0m17:18:45.827742 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m17:18:45.828409 [info ] [MainThread]: 
+[0m17:18:45.829150 [error] [MainThread]: [[31mERROR[0m]: in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)
+[0m17:18:45.830027 [error] [MainThread]:   Database Error in model stg_telegram_messages (models\staging\stg_telegram_messages.sql)
+  relation "raw.telegram_messages" does not exist
+  LINE 8:     select * from "medical_db"."raw"."telegram_messages"
+                            ^
+  compiled code at target\run\medical_warehouse\models\staging\stg_telegram_messages.sql
+[0m17:18:45.830645 [info ] [MainThread]: 
+[0m17:18:45.831332 [info ] [MainThread]:   compiled code at target\compiled\medical_warehouse\models\staging\stg_telegram_messages.sql
+[0m17:18:45.833073 [info ] [MainThread]: 
+[0m17:18:45.837181 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=2 NO-OP=0 REUSED=0 TOTAL=4
+[0m17:18:45.838425 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m17:18:45.840014 [debug] [MainThread]: Command `dbt run` failed at 17:18:45.839787 after 7.27 seconds
+[0m17:18:45.840583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CD1CA190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223C46E9CC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223CCF6B770>]}
+[0m17:18:45.841092 [debug] [MainThread]: Flushing usage events
+[0m17:18:47.633171 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:35:32.943877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027198405940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027195CA0B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719ACF3890>]}
+
+
+============================== 17:35:32.973404 | f6348b25-4c2d-44f6-949f-8bd62761ac2e ==============================
+[0m17:35:32.973404 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:35:32.976703 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m17:35:33.311935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719ACDA3F0>]}
+[0m17:35:33.436393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719AE17240>]}
+[0m17:35:33.438903 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:35:34.096238 [debug] [MainThread]: checksum: 5f6fb86e6b771a9b4f977248c22cc3a35e9a62bd5f45b5c0239fc851495f1ddd, vars: {}, profile: medical_warehouse, target: dev, version: 1.12.0b3
+[0m17:35:34.514958 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:35:34.515671 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:35:34.516400 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:35:34.613186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719ADDB050>]}
+[0m17:35:34.766393 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m17:35:34.771481 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m17:35:34.830000 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\osi_document.json
+[0m17:35:34.861824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719B472B70>]}
+[0m17:35:34.862636 [info ] [MainThread]: Found 4 models, 3 data tests, 1 source, 475 macros
+[0m17:35:34.863548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719B486EB0>]}
+[0m17:35:34.866683 [info ] [MainThread]: 
+[0m17:35:34.867610 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:35:34.868228 [info ] [MainThread]: 
+[0m17:35:34.869681 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:35:34.879601 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_db'
+[0m17:35:35.009008 [debug] [ThreadPool]: Using postgres connection "list_medical_db"
+[0m17:35:35.009548 [debug] [ThreadPool]: On list_medical_db: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:35:35.009914 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:35:35.048192 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.038 seconds
+[0m17:35:35.050118 [debug] [ThreadPool]: On list_medical_db: Close
+[0m17:35:35.053797 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_db_analytics'
+[0m17:35:35.063025 [debug] [ThreadPool]: Using postgres connection "list_medical_db_analytics"
+[0m17:35:35.063581 [debug] [ThreadPool]: On list_medical_db_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_db_analytics"} */
+select
+      'medical_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m17:35:35.063934 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:35:35.099950 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.036 seconds
+[0m17:35:35.101642 [debug] [ThreadPool]: On list_medical_db_analytics: ROLLBACK
+[0m17:35:35.103826 [debug] [ThreadPool]: On list_medical_db_analytics: Close
+[0m17:35:35.111879 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:35.112457 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:35:35.113278 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:35:35.158489 [debug] [MainThread]: SQL status: SELECT 0 in 0.045 seconds
+[0m17:35:35.160250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719B858390>]}
+[0m17:35:35.161090 [debug] [MainThread]: On master: ROLLBACK
+[0m17:35:35.163299 [debug] [MainThread]: On master: COMMIT
+[0m17:35:35.163813 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:35.164134 [debug] [MainThread]: On master: COMMIT
+[0m17:35:35.167600 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m17:35:35.168187 [debug] [MainThread]: On master: Close
+[0m17:35:35.178410 [debug] [Thread-1 (]: Began running node model.medical_warehouse.dim_dates
+[0m17:35:35.179037 [debug] [Thread-2 (]: Began running node model.medical_warehouse.stg_telegram_messages
+[0m17:35:35.179659 [info ] [Thread-1 (]: 1 of 4 START sql table model analytics.dim_dates ............................... [RUN]
+[0m17:35:35.181506 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.medical_warehouse.dim_dates'
+[0m17:35:35.182294 [debug] [Thread-1 (]: Began compiling node model.medical_warehouse.dim_dates
+[0m17:35:35.191621 [debug] [Thread-1 (]: Writing injected SQL for node "model.medical_warehouse.dim_dates"
+[0m17:35:35.180208 [info ] [Thread-2 (]: 2 of 4 START sql view model analytics.stg_telegram_messages .................... [RUN]
+[0m17:35:35.193886 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.medical_warehouse.stg_telegram_messages'
+[0m17:35:35.194807 [debug] [Thread-2 (]: Began compiling node model.medical_warehouse.stg_telegram_messages
+[0m17:35:35.198292 [debug] [Thread-2 (]: Writing injected SQL for node "model.medical_warehouse.stg_telegram_messages"
+[0m17:35:35.199184 [debug] [Thread-1 (]: Began executing node model.medical_warehouse.dim_dates
+[0m17:35:35.232149 [debug] [Thread-2 (]: Began executing node model.medical_warehouse.stg_telegram_messages
+[0m17:35:35.267122 [debug] [Thread-1 (]: Writing runtime sql for node "model.medical_warehouse.dim_dates"
+[0m17:35:35.274815 [debug] [Thread-2 (]: Writing runtime sql for node "model.medical_warehouse.stg_telegram_messages"
+[0m17:35:35.276706 [debug] [Thread-2 (]: Using postgres connection "model.medical_warehouse.stg_telegram_messages"
+[0m17:35:35.278156 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.stg_telegram_messages"} */
+
+  create view "medical_db"."analytics"."stg_telegram_messages__dbt_tmp"
+    
+    
+  as (
+    with raw_source as (
+    select * from "medical_db"."raw"."telegram_messages"
+)
+
+select
+    message_id,
+    replace(channel_name, '@', '') as channel_name,
+    cast(message_date as timestamp) as message_date,
+    coalesce(message_text, '') as message_text,
+    length(coalesce(message_text, '')) as message_length,
+    coalesce(has_media, false) as has_image,
+    image_path,
+    coalesce(views, 0) as view_count,
+    coalesce(forwards, 0) as forward_count
+from raw_source
+where message_id is not null
+  );
+[0m17:35:35.278651 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:35:35.277555 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:35:35.279408 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_dates"} */
+
+  
+    
+
+  create  table "medical_db"."analytics"."dim_dates__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with date_series as (
+    select generate_series(
+        '2026-01-01'::timestamp, 
+        '2026-12-31'::timestamp, 
+        '1 day'::interval
+    ) as full_date
+)
+
+select
+    to_char(full_date, 'YYYYMMDD')::int as date_key,
+    full_date::date as full_date,
+    extract(isodow from full_date) as day_of_week,
+    to_char(full_date, 'Day') as day_name,
+    extract(week from full_date) as week_of_year,
+    extract(month from full_date) as month,
+    to_char(full_date, 'Month') as month_name,
+    extract(quarter from full_date) as quarter,
+    extract(year from full_date) as year,
+    case when extract(isodow from full_date) in (6, 7) then true else false end as is_weekend
+from date_series
+  );
+  
+[0m17:35:35.279974 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:35:35.318121 [debug] [Thread-1 (]: SQL status: SELECT 365 in 0.038 seconds
+[0m17:35:35.329722 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.051 seconds
+[0m17:35:35.336607 [debug] [Thread-2 (]: Using postgres connection "model.medical_warehouse.stg_telegram_messages"
+[0m17:35:35.333243 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:35:35.337600 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_dates"} */
+alter table "medical_db"."analytics"."dim_dates" rename to "dim_dates__dbt_backup"
+[0m17:35:35.337181 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.stg_telegram_messages"} */
+alter table "medical_db"."analytics"."stg_telegram_messages__dbt_tmp" rename to "stg_telegram_messages"
+[0m17:35:35.341188 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m17:35:35.345396 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:35:35.341943 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m17:35:35.345934 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_dates"} */
+alter table "medical_db"."analytics"."dim_dates__dbt_tmp" rename to "dim_dates"
+[0m17:35:35.366915 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: COMMIT
+[0m17:35:35.367934 [debug] [Thread-2 (]: Using postgres connection "model.medical_warehouse.stg_telegram_messages"
+[0m17:35:35.368432 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: COMMIT
+[0m17:35:35.370093 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m17:35:35.376158 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: COMMIT
+[0m17:35:35.377837 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:35:35.378236 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: COMMIT
+[0m17:35:35.377350 [debug] [Thread-2 (]: SQL status: COMMIT in 0.008 seconds
+[0m17:35:35.386672 [debug] [Thread-2 (]: Applying DROP to: "medical_db"."analytics"."stg_telegram_messages__dbt_backup"
+[0m17:35:35.387324 [debug] [Thread-1 (]: SQL status: COMMIT in 0.009 seconds
+[0m17:35:35.399085 [debug] [Thread-1 (]: Applying DROP to: "medical_db"."analytics"."dim_dates__dbt_backup"
+[0m17:35:35.396492 [debug] [Thread-2 (]: Using postgres connection "model.medical_warehouse.stg_telegram_messages"
+[0m17:35:35.403426 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.stg_telegram_messages"} */
+drop view if exists "medical_db"."analytics"."stg_telegram_messages__dbt_backup" cascade
+[0m17:35:35.402853 [debug] [Thread-1 (]: Using postgres connection "model.medical_warehouse.dim_dates"
+[0m17:35:35.403983 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_dates"} */
+drop table if exists "medical_db"."analytics"."dim_dates__dbt_backup" cascade
+[0m17:35:35.405822 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m17:35:35.410306 [debug] [Thread-2 (]: On model.medical_warehouse.stg_telegram_messages: Close
+[0m17:35:35.415197 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719B4DE810>]}
+[0m17:35:35.416186 [info ] [Thread-2 (]: 2 of 4 OK created sql view model analytics.stg_telegram_messages ............... [[32mCREATE VIEW[0m in 0.22s]
+[0m17:35:35.417446 [debug] [Thread-2 (]: Finished running node model.medical_warehouse.stg_telegram_messages
+[0m17:35:35.418387 [debug] [Thread-4 (]: Began running node model.medical_warehouse.fct_messages
+[0m17:35:35.419838 [debug] [Thread-3 (]: Began running node model.medical_warehouse.dim_channels
+[0m17:35:35.419128 [info ] [Thread-4 (]: 4 of 4 START sql table model analytics.fct_messages ............................ [RUN]
+[0m17:35:35.422205 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.medical_warehouse.fct_messages'
+[0m17:35:35.422899 [debug] [Thread-4 (]: Began compiling node model.medical_warehouse.fct_messages
+[0m17:35:35.421484 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.017 seconds
+[0m17:35:35.427604 [debug] [Thread-4 (]: Writing injected SQL for node "model.medical_warehouse.fct_messages"
+[0m17:35:35.420932 [info ] [Thread-3 (]: 3 of 4 START sql table model analytics.dim_channels ............................ [RUN]
+[0m17:35:35.432775 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.medical_warehouse.dim_channels'
+[0m17:35:35.431319 [debug] [Thread-1 (]: On model.medical_warehouse.dim_dates: Close
+[0m17:35:35.433502 [debug] [Thread-3 (]: Began compiling node model.medical_warehouse.dim_channels
+[0m17:35:35.438305 [debug] [Thread-3 (]: Writing injected SQL for node "model.medical_warehouse.dim_channels"
+[0m17:35:35.439036 [debug] [Thread-4 (]: Began executing node model.medical_warehouse.fct_messages
+[0m17:35:35.446937 [debug] [Thread-4 (]: Writing runtime sql for node "model.medical_warehouse.fct_messages"
+[0m17:35:35.439869 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719B92C3C0>]}
+[0m17:35:35.448230 [info ] [Thread-1 (]: 1 of 4 OK created sql table model analytics.dim_dates .......................... [[32mSELECT 365[0m in 0.26s]
+[0m17:35:35.450292 [debug] [Thread-1 (]: Finished running node model.medical_warehouse.dim_dates
+[0m17:35:35.450907 [debug] [Thread-4 (]: Using postgres connection "model.medical_warehouse.fct_messages"
+[0m17:35:35.449349 [debug] [Thread-3 (]: Began executing node model.medical_warehouse.dim_channels
+[0m17:35:35.455671 [debug] [Thread-3 (]: Writing runtime sql for node "model.medical_warehouse.dim_channels"
+[0m17:35:35.451681 [debug] [Thread-4 (]: On model.medical_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.fct_messages"} */
+
+  
+    
+
+  create  table "medical_db"."analytics"."fct_messages__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with staging as (
+    select * from "medical_db"."analytics"."stg_telegram_messages"
+)
+
+select
+    s.message_id,
+    md5(s.channel_name) as channel_key,
+    to_char(s.message_date, 'YYYYMMDD')::int as date_key,
+    s.message_text,
+    s.message_length,
+    s.view_count,
+    s.forward_count,
+    s.has_image
+from staging s
+  );
+  
+[0m17:35:35.456749 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:35:35.461261 [debug] [Thread-3 (]: Using postgres connection "model.medical_warehouse.dim_channels"
+[0m17:35:35.462175 [debug] [Thread-3 (]: On model.medical_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_channels"} */
+
+  
+    
+
+  create  table "medical_db"."analytics"."dim_channels__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with staging as (
+    select * from "medical_db"."analytics"."stg_telegram_messages"
+)
+
+select
+    md5(channel_name) as channel_key,
+    channel_name,
+    case 
+        when channel_name ilike '%pharma%' then 'Pharmaceutical'
+        when channel_name ilike '%cosmetics%' then 'Cosmetics'
+        else 'Medical'
+    end as channel_type,
+    min(message_date) as first_post_date,
+    max(message_date) as last_post_date,
+    count(message_id) as total_posts,
+    coalesce(avg(view_count), 0) as avg_views
+from staging
+group by channel_name
+  );
+  
+[0m17:35:35.462865 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:35:35.506652 [debug] [Thread-4 (]: SQL status: SELECT 100 in 0.050 seconds
+[0m17:35:35.511986 [debug] [Thread-4 (]: Using postgres connection "model.medical_warehouse.fct_messages"
+[0m17:35:35.513063 [debug] [Thread-4 (]: On model.medical_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.fct_messages"} */
+alter table "medical_db"."analytics"."fct_messages__dbt_tmp" rename to "fct_messages"
+[0m17:35:35.514899 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.052 seconds
+[0m17:35:35.518936 [debug] [Thread-3 (]: Using postgres connection "model.medical_warehouse.dim_channels"
+[0m17:35:35.519989 [debug] [Thread-3 (]: On model.medical_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_channels"} */
+alter table "medical_db"."analytics"."dim_channels__dbt_tmp" rename to "dim_channels"
+[0m17:35:35.519490 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m17:35:35.522045 [debug] [Thread-4 (]: On model.medical_warehouse.fct_messages: COMMIT
+[0m17:35:35.523388 [debug] [Thread-4 (]: Using postgres connection "model.medical_warehouse.fct_messages"
+[0m17:35:35.524057 [debug] [Thread-4 (]: On model.medical_warehouse.fct_messages: COMMIT
+[0m17:35:35.522861 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m17:35:35.526628 [debug] [Thread-3 (]: On model.medical_warehouse.dim_channels: COMMIT
+[0m17:35:35.527361 [debug] [Thread-3 (]: Using postgres connection "model.medical_warehouse.dim_channels"
+[0m17:35:35.527767 [debug] [Thread-3 (]: On model.medical_warehouse.dim_channels: COMMIT
+[0m17:35:35.530045 [debug] [Thread-4 (]: SQL status: COMMIT in 0.005 seconds
+[0m17:35:35.533136 [debug] [Thread-4 (]: Applying DROP to: "medical_db"."analytics"."fct_messages__dbt_backup"
+[0m17:35:35.534701 [debug] [Thread-4 (]: Using postgres connection "model.medical_warehouse.fct_messages"
+[0m17:35:35.535148 [debug] [Thread-4 (]: On model.medical_warehouse.fct_messages: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.fct_messages"} */
+drop table if exists "medical_db"."analytics"."fct_messages__dbt_backup" cascade
+[0m17:35:35.533751 [debug] [Thread-3 (]: SQL status: COMMIT in 0.006 seconds
+[0m17:35:35.538207 [debug] [Thread-3 (]: Applying DROP to: "medical_db"."analytics"."dim_channels__dbt_backup"
+[0m17:35:35.539483 [debug] [Thread-3 (]: Using postgres connection "model.medical_warehouse.dim_channels"
+[0m17:35:35.540041 [debug] [Thread-3 (]: On model.medical_warehouse.dim_channels: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "model.medical_warehouse.dim_channels"} */
+drop table if exists "medical_db"."analytics"."dim_channels__dbt_backup" cascade
+[0m17:35:35.540965 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m17:35:35.543051 [debug] [Thread-4 (]: On model.medical_warehouse.fct_messages: Close
+[0m17:35:35.543607 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m17:35:35.546178 [debug] [Thread-3 (]: On model.medical_warehouse.dim_channels: Close
+[0m17:35:35.546979 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719BCC7F70>]}
+[0m17:35:35.549773 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6348b25-4c2d-44f6-949f-8bd62761ac2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719BDF52D0>]}
+[0m17:35:35.548964 [info ] [Thread-4 (]: 4 of 4 OK created sql table model analytics.fct_messages ....................... [[32mSELECT 100[0m in 0.12s]
+[0m17:35:35.551918 [debug] [Thread-4 (]: Finished running node model.medical_warehouse.fct_messages
+[0m17:35:35.550920 [info ] [Thread-3 (]: 3 of 4 OK created sql table model analytics.dim_channels ....................... [[32mSELECT 1[0m in 0.12s]
+[0m17:35:35.553196 [debug] [Thread-3 (]: Finished running node model.medical_warehouse.dim_channels
+[0m17:35:35.555574 [debug] [MainThread]: On master: COMMIT
+[0m17:35:35.556446 [debug] [MainThread]: Using postgres connection "master"
+[0m17:35:35.557874 [debug] [MainThread]: On master: COMMIT
+[0m17:35:35.558766 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:35:35.584037 [debug] [MainThread]: SQL status: COMMIT in 0.025 seconds
+[0m17:35:35.584782 [debug] [MainThread]: On master: Close
+[0m17:35:35.586065 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:35:35.586711 [debug] [MainThread]: Connection 'list_medical_db' was properly closed.
+[0m17:35:35.587133 [debug] [MainThread]: Connection 'list_medical_db_analytics' was properly closed.
+[0m17:35:35.587447 [debug] [MainThread]: Connection 'model.medical_warehouse.dim_dates' was properly closed.
+[0m17:35:35.587750 [debug] [MainThread]: Connection 'model.medical_warehouse.stg_telegram_messages' was properly closed.
+[0m17:35:35.588185 [debug] [MainThread]: Connection 'model.medical_warehouse.fct_messages' was properly closed.
+[0m17:35:35.588802 [debug] [MainThread]: Connection 'model.medical_warehouse.dim_channels' was properly closed.
+[0m17:35:35.589328 [info ] [MainThread]: 
+[0m17:35:35.589960 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.72 seconds (0.72s).
+[0m17:35:35.592518 [debug] [MainThread]: Command end result
+[0m17:35:35.634216 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m17:35:35.639558 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m17:35:35.647026 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\osi_document.json
+[0m17:35:35.661491 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\run_results.json
+[0m17:35:35.662688 [info ] [MainThread]: 
+[0m17:35:35.663806 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:35:35.664851 [info ] [MainThread]: 
+[0m17:35:35.666131 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m17:35:35.668021 [debug] [MainThread]: Command `dbt run` succeeded at 17:35:35.667797 after 3.00 seconds
+[0m17:35:35.669028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719AD2E190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027192269CC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002719AA6BD10>]}
+[0m17:35:35.670062 [debug] [MainThread]: Flushing usage events
+[0m17:35:38.083532 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:36:03.788623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C4005940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C18A0B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C68F3890>]}
+
+
+============================== 17:36:03.806904 | a95c28a9-fd52-4b2c-983e-f8e28da0a7be ==============================
+[0m17:36:03.806904 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m17:36:03.808411 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\hp\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m17:36:04.129429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a95c28a9-fd52-4b2c-983e-f8e28da0a7be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C68DE3F0>]}
+[0m17:36:04.219961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a95c28a9-fd52-4b2c-983e-f8e28da0a7be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C6A17240>]}
+[0m17:36:04.222087 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m17:36:04.868552 [debug] [MainThread]: checksum: 5f6fb86e6b771a9b4f977248c22cc3a35e9a62bd5f45b5c0239fc851495f1ddd, vars: {}, profile: medical_warehouse, target: dev, version: 1.12.0b3
+[0m17:36:05.160745 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:36:05.161308 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:36:05.161638 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:36:05.236955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a95c28a9-fd52-4b2c-983e-f8e28da0a7be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C69DB050>]}
+[0m17:36:05.383165 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m17:36:05.388152 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m17:36:05.440836 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\osi_document.json
+[0m17:36:05.545047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a95c28a9-fd52-4b2c-983e-f8e28da0a7be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C7088B90>]}
+[0m17:36:05.545826 [info ] [MainThread]: Found 4 models, 3 data tests, 1 source, 475 macros
+[0m17:36:05.546683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a95c28a9-fd52-4b2c-983e-f8e28da0a7be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C70FB310>]}
+[0m17:36:05.550279 [info ] [MainThread]: 
+[0m17:36:05.551035 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:36:05.551867 [info ] [MainThread]: 
+[0m17:36:05.552824 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:36:05.564121 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_db_analytics'
+[0m17:36:05.737458 [debug] [ThreadPool]: Using postgres connection "list_medical_db_analytics"
+[0m17:36:05.738155 [debug] [ThreadPool]: On list_medical_db_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_db_analytics"} */
+select
+      'medical_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m17:36:05.738634 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:36:05.790668 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.052 seconds
+[0m17:36:05.792675 [debug] [ThreadPool]: On list_medical_db_analytics: ROLLBACK
+[0m17:36:05.794948 [debug] [ThreadPool]: On list_medical_db_analytics: Close
+[0m17:36:05.804758 [debug] [MainThread]: Using postgres connection "master"
+[0m17:36:05.805406 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:36:05.806948 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:36:05.843424 [debug] [MainThread]: SQL status: SELECT 1 in 0.036 seconds
+[0m17:36:05.845160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a95c28a9-fd52-4b2c-983e-f8e28da0a7be', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C73B2750>]}
+[0m17:36:05.846058 [debug] [MainThread]: On master: ROLLBACK
+[0m17:36:05.848194 [debug] [MainThread]: On master: COMMIT
+[0m17:36:05.848768 [debug] [MainThread]: Using postgres connection "master"
+[0m17:36:05.849196 [debug] [MainThread]: On master: COMMIT
+[0m17:36:05.852680 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m17:36:05.853272 [debug] [MainThread]: On master: Close
+[0m17:36:05.868167 [debug] [Thread-1 (]: Began running node test.medical_warehouse.not_null_fct_messages_message_id.de346706b5
+[0m17:36:05.868900 [debug] [Thread-2 (]: Began running node test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a
+[0m17:36:05.869730 [debug] [Thread-3 (]: Began running node test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d
+[0m17:36:05.870345 [info ] [Thread-1 (]: 1 of 3 START test not_null_fct_messages_message_id ............................. [RUN]
+[0m17:36:05.873296 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.medical_warehouse.not_null_fct_messages_message_id.de346706b5'
+[0m17:36:05.874598 [debug] [Thread-1 (]: Began compiling node test.medical_warehouse.not_null_fct_messages_message_id.de346706b5
+[0m17:36:05.870921 [info ] [Thread-2 (]: 2 of 3 START test relationships_fct_messages_channel_key__channel_key__ref_dim_channels_  [RUN]
+[0m17:36:05.871712 [info ] [Thread-3 (]: 3 of 3 START test unique_fct_messages_message_id ............................... [RUN]
+[0m17:36:05.909251 [debug] [Thread-1 (]: Writing injected SQL for node "test.medical_warehouse.not_null_fct_messages_message_id.de346706b5"
+[0m17:36:05.910366 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a'
+[0m17:36:05.912779 [debug] [Thread-2 (]: Began compiling node test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a
+[0m17:36:05.911480 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d'
+[0m17:36:05.928710 [debug] [Thread-3 (]: Began compiling node test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d
+[0m17:36:05.940616 [debug] [Thread-3 (]: Writing injected SQL for node "test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d"
+[0m17:36:05.927863 [debug] [Thread-2 (]: Writing injected SQL for node "test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a"
+[0m17:36:05.941441 [debug] [Thread-1 (]: Began executing node test.medical_warehouse.not_null_fct_messages_message_id.de346706b5
+[0m17:36:05.972011 [debug] [Thread-2 (]: Began executing node test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a
+[0m17:36:05.985790 [debug] [Thread-2 (]: Writing runtime sql for node "test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a"
+[0m17:36:05.988559 [debug] [Thread-3 (]: Began executing node test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d
+[0m17:36:05.993655 [debug] [Thread-3 (]: Writing runtime sql for node "test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d"
+[0m17:36:05.987180 [debug] [Thread-1 (]: Writing runtime sql for node "test.medical_warehouse.not_null_fct_messages_message_id.de346706b5"
+[0m17:36:05.996095 [debug] [Thread-3 (]: Using postgres connection "test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d"
+[0m17:36:05.997798 [debug] [Thread-3 (]: On test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    message_id as unique_field,
+    count(*) as n_records
+
+from "medical_db"."analytics"."fct_messages"
+where message_id is not null
+group by message_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:05.998720 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:36:06.001785 [debug] [Thread-1 (]: Using postgres connection "test.medical_warehouse.not_null_fct_messages_message_id.de346706b5"
+[0m17:36:06.002479 [debug] [Thread-1 (]: On test.medical_warehouse.not_null_fct_messages_message_id.de346706b5: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "test.medical_warehouse.not_null_fct_messages_message_id.de346706b5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select message_id
+from "medical_db"."analytics"."fct_messages"
+where message_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:06.003094 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:36:06.004081 [debug] [Thread-2 (]: Using postgres connection "test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a"
+[0m17:36:06.004691 [debug] [Thread-2 (]: On test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "medical_warehouse", "target_name": "dev", "node_id": "test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select channel_key as from_field
+    from "medical_db"."analytics"."fct_messages"
+    where channel_key is not null
+),
+
+parent as (
+    select channel_key as to_field
+    from "medical_db"."analytics"."dim_channels"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:36:06.005468 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:36:06.049874 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.051 seconds
+[0m17:36:06.058330 [debug] [Thread-3 (]: On test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d: ROLLBACK
+[0m17:36:06.059459 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.056 seconds
+[0m17:36:06.062251 [debug] [Thread-1 (]: On test.medical_warehouse.not_null_fct_messages_message_id.de346706b5: ROLLBACK
+[0m17:36:06.063127 [debug] [Thread-3 (]: On test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d: Close
+[0m17:36:06.066460 [debug] [Thread-1 (]: On test.medical_warehouse.not_null_fct_messages_message_id.de346706b5: Close
+[0m17:36:06.065317 [info ] [Thread-3 (]: 3 of 3 PASS unique_fct_messages_message_id ..................................... [[32mPASS[0m in 0.15s]
+[0m17:36:06.070779 [debug] [Thread-3 (]: Finished running node test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d
+[0m17:36:06.067766 [info ] [Thread-1 (]: 1 of 3 PASS not_null_fct_messages_message_id ................................... [[32mPASS[0m in 0.19s]
+[0m17:36:06.071870 [debug] [Thread-1 (]: Finished running node test.medical_warehouse.not_null_fct_messages_message_id.de346706b5
+[0m17:36:06.072799 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.067 seconds
+[0m17:36:06.074516 [debug] [Thread-2 (]: On test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a: ROLLBACK
+[0m17:36:06.075570 [debug] [Thread-2 (]: On test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a: Close
+[0m17:36:06.076582 [info ] [Thread-2 (]: 2 of 3 PASS relationships_fct_messages_channel_key__channel_key__ref_dim_channels_  [[32mPASS[0m in 0.17s]
+[0m17:36:06.077497 [debug] [Thread-2 (]: Finished running node test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a
+[0m17:36:06.079294 [debug] [MainThread]: On master: COMMIT
+[0m17:36:06.079957 [debug] [MainThread]: Using postgres connection "master"
+[0m17:36:06.080382 [debug] [MainThread]: On master: COMMIT
+[0m17:36:06.080970 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:36:06.115924 [debug] [MainThread]: SQL status: COMMIT in 0.035 seconds
+[0m17:36:06.117165 [debug] [MainThread]: On master: Close
+[0m17:36:06.119097 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:36:06.119705 [debug] [MainThread]: Connection 'list_medical_db_analytics' was properly closed.
+[0m17:36:06.120147 [debug] [MainThread]: Connection 'test.medical_warehouse.not_null_fct_messages_message_id.de346706b5' was properly closed.
+[0m17:36:06.120559 [debug] [MainThread]: Connection 'test.medical_warehouse.relationships_fct_messages_channel_key__channel_key__ref_dim_channels_.a84e299b5a' was properly closed.
+[0m17:36:06.120960 [debug] [MainThread]: Connection 'test.medical_warehouse.unique_fct_messages_message_id.655aa1a48d' was properly closed.
+[0m17:36:06.121797 [info ] [MainThread]: 
+[0m17:36:06.123889 [info ] [MainThread]: Finished running 3 data tests in 0 hours 0 minutes and 0.57 seconds (0.57s).
+[0m17:36:06.126419 [debug] [MainThread]: Command end result
+[0m17:36:06.199244 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m17:36:06.205108 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m17:36:06.211830 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\osi_document.json
+[0m17:36:06.224199 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\hp\medical-telegram-warehouse\medical_warehouse\target\run_results.json
+[0m17:36:06.224783 [info ] [MainThread]: 
+[0m17:36:06.225578 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:36:06.226258 [info ] [MainThread]: 
+[0m17:36:06.226975 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m17:36:06.228568 [debug] [MainThread]: Command `dbt test` succeeded at 17:36:06.228332 after 2.68 seconds
+[0m17:36:06.229116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C75747D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C7643280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C76436A0>]}
+[0m17:36:06.229595 [debug] [MainThread]: Flushing usage events
+[0m17:36:07.802911 [debug] [MainThread]: An error was encountered while trying to flush usage events
